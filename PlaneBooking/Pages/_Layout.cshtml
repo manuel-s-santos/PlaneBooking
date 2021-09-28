@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewData["Title"]  - Airline School </title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/css/custom.min.css" rel="stylesheet">
+    <meta name="robots" content="noindex, follow">
+    <style>
+            .footer_wrapper {
+                right: 0px;
+                margin: 0px auto;
+                margin-top: 5%;
+                max-width: 350px;
+                position: relative;
+                padding: 25px 0 0; 
+                text-align: center;
+                text-shadow: 0 1px 0 #fff; 
+                min-width: 280px;
+            }
+
+            .footer_wrapper h1 {
+                font: normal 25px Helvetica, Arial, sans-serif;
+                letter-spacing: -0.05em;
+                line-height: 20px;
+                margin: 10px 0 30px;
+            }
+    </style>
+</head>
+<body class="login">
+    <div>
+
+        @RenderBody()
+
+        <div class="footer_wrapper">
+                <div class="clearfix"></div>
+                <br />
+                <div>
+                    <h1><i class="fa fa-plane"></i> Airline School</h1>
+                    <p>©2021 All Rights Reserved.</p>
+                </div>
+        </div>
+     </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

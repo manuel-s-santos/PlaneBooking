@@ -1,0 +1,39 @@
+﻿@page
+@model PlaneBooking.Pages.Dashboard.Airplanes.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Airplane</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Airplane.AirPlaneName" class="control-label"></label>
+                <input asp-for="Airplane.AirPlaneName" class="form-control" />
+                <span asp-validation-for="Airplane.AirPlaneName" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Airplane.IsAvailable" /> @Html.DisplayNameFor(model => model.Airplane.IsAvailable)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

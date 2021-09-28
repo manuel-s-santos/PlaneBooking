@@ -1,0 +1,60 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+
+<div class="login_wrapper">
+    <section class="login_content">
+        <form id="frmRegister" method="post">
+
+            <h1>Create Account</h1>
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="form-group">
+                <input asp-for="Input.Firstname" class="form-control" placeholder="First name" />
+                <span asp-validation-for="Input.Firstname" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input asp-for="Input.Lastname" class="form-control" placeholder="Last name" />
+                <span asp-validation-for="Input.Lastname" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input asp-for="Input.Email" class="form-control" placeholder="Email" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input asp-for="Input.Password" class="form-control" placeholder="Password" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Input.ConfirmPassword" class="form-control" placeholder="Confirm Password" />
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+        </form>
+
+        <div class="clearfix"></div>
+        <div class="separator">
+            <p class="change_link">
+                Already a member ?
+                <a asp-page="/Index"> Log in </a>
+            </p>
+            <div class="clearfix"></div>
+            <br />
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+}
+
+

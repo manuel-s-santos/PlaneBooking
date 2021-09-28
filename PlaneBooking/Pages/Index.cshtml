@@ -1,0 +1,36 @@
+﻿@page
+@model IndexModel
+
+
+<div class="login_wrapper">
+    <section class="login_content">
+        <form id="frmLogin" method="post">
+            <h1>Login</h1>
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div>
+                <input asp-for="Input.Email" class="form-control" placeholder="Email" />
+            </div>
+            <div>
+                <input type="password" placeholder="Password" asp-for="Input.Password" class="form-control" />
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Log in</button>
+            </div>
+        </form>
+
+        <div class="clearfix"></div>
+        <div class="separator">
+            <p class="change_link">
+                New student?
+                <a asp-page="/Account/Register"> Register </a>
+            </p>
+            <div class="clearfix"></div>
+            <br />
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+   
+}
